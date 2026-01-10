@@ -1,0 +1,407 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Zeta Design — Portfolio</title>
+  <meta name="description" content="Zeta Design — portfolio by Emily Zavala. Architecture, interiors, and product concepts." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+
+  <!-- ✅ FAVICON (TAB ICON) — put your file at: assets/logo.png -->
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/logo.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="assets/logo.png">
+  <link rel="apple-touch-icon" href="assets/logo.png">
+</head>
+
+<body>
+
+
+  <header class="header" id="top">
+    <div class="container header__inner">
+      <!-- ✅ HEADER LOGO (NEXT TO TEXT) -->
+      <a class="logo" href="#top" aria-label="Zeta Design home">
+        <img class="logo__img" src="assets/logo.png" alt="Zeta Design logo" />
+        <span class="logo__text">Zeta <span class="logo__text--olive">Design</span></span>
+      </a>
+
+      <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="nav">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="nav" id="nav" aria-label="Primary">
+        <a href="#home" class="nav__link">Main</a>
+        <a href="#projects" class="nav__link">Projects</a>
+        <a href="#about" class="nav__link">About</a>
+        <a href="#instagram" class="nav__link">Instagram</a>
+        <a href="#contact" class="nav__link nav__link--cta">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- HERO / MAIN -->
+    <section class="hero" id="home">
+      <div class="container hero__grid">
+        <div class="hero__copy">
+          <p class="eyebrow">Architecture • Interiors • Product Concepts</p>
+          <h1 class="hero__title">
+             Unconventional, purposeful and tailored to <span class="olive"> real life</span>.
+          </h1>
+          <p class="hero__subtitle">
+            Zeta Design is the portfolio of <strong>Emily Zavala</strong>. A curated portfolio of architecture,
+			interiors, and product concepts—where minimal aesthetics meet purposeful design.
+          </p>
+
+          <div class="hero__actions">
+            <a class="button" href="#projects">View projects</a>
+            <a class="button button--ghost" href="#contact">Contact</a>
+          </div>
+
+          <div class="hero__stats">
+            <div class="stat">
+              <div class="stat__value">10</div>
+              <div class="stat__label">Selected projects</div>
+            </div>
+            <div class="stat">
+              <div class="stat__value">MX • IT • US</div>
+              <div class="stat__label">International formation</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero__media" aria-label="Featured project preview">
+          <div class="media-card">
+            <img src="assets/pages/page-01.png" alt="Alarcón Arteaga preview" loading="eager" />
+            <div class="media-card__meta">
+              <div class="media-card__title">Alarcón Arteaga</div>
+              <div class="media-card__tag">Residential</div>
+            </div>
+          </div>
+          <p class="hero__quote">
+            “Form and function come together with clarity and intention.”
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section class="section" id="projects">
+      <div class="container">
+        <div class="section__head">
+          <h2 class="section__title">Projects</h2>
+          <p class="section__subtitle">A curated selection of interiors, concepts, and spatial strategies.</p>
+        </div>
+
+        <div class="filters" role="tablist" aria-label="Project filters">
+          <button class="chip is-active" data-filter="all" role="tab" aria-selected="true">All</button>
+          <button class="chip" data-filter="Residential" role="tab">Residential</button>
+          <button class="chip" data-filter="Retail" role="tab">Retail</button>
+          <button class="chip" data-filter="Commercial" role="tab">Commercial</button>
+          <button class="chip" data-filter="Product Design" role="tab">Product</button>
+          <button class="chip" data-filter="Mixed-Use" role="tab">Mixed-Use</button>
+          <button class="chip" data-filter="Event / Experience" role="tab">Experience</button>
+        </div>
+
+        <div class="grid" id="projectsGrid" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="section section--alt" id="about">
+      <div class="container about">
+        <div class="about__left">
+          <h2 class="section__title">About</h2>
+          <p class="lede">This is Emily Zavala…</p>
+
+          <div class="about__body">
+            <p>An Ecuadorian architect with an international background that has shaped the way I design through curiosity, exploration, and continuous learning.</p>
+
+            <p>I studied Architecture at Tecnológico de Monterrey in Monterrey, Mexico, a place that became my home for four years and where I had the opportunity to engage with different cultures, perspectives, and ways of understanding design. During that time, I discovered the richness of materials, proportion, and style, as well as the influence of renowned Latin American architecture masters.</p>
+
+            <p>Near the end of my degree, I traveled to Italy to earn a certification in Interior Design in Contemporary Living, completing a semester at the Istituto Lorenzo de’ Medici. That experience allowed me to dive deeper into contemporary interior design from a more artistic and detail-driven perspective, and it confirmed something that truly defines me: I love stepping outside my comfort zone to keep learning.</p>
+
+            <p>After completing one of the most important personal milestones of my life, earning my architecture degree, I knew it was essential to continue growing. I am currently pursuing my Master of Architecture at SCAD, where I’m expanding my vision, meeting new creative minds, and embracing the practices, concepts, and architectural systems unique to the United States. This stage excites me because it allows me to connect the best of Latin American construction knowledge with North American methods and standards.</p>
+
+            <p>I’m passionate about what is new, technological, artistic, and functional. I enjoy creating spaces that are not only visually compelling, even unconventional, but also purposeful and tailored to real life: daily routines, needs, and aspirations. For me, the essence of design happens when form and function come together with clarity and intention.</p>
+
+            <p>I’m ready to create eclectic spaces with character, bringing together the best of style, form, function, and identity to tell a story that feels uniquely yours.</p>
+          </div>
+
+          <div class="about__highlights">
+            <div class="pill">Tecnológico de Monterrey (Architecture)</div>
+            <div class="pill">Istituto Lorenzo de’ Medici (Interior Design)</div>
+            <div class="pill">Master of Architecture — SCAD</div>
+          </div>
+        </div>
+
+        <aside class="about__right">
+          <div class="about__portrait">
+            <img src="assets/emily.png" alt="Emily Zavala portrait" loading="lazy" />
+          </div>
+
+          <div class="card">
+            <div class="card__title">Services</div>
+            <ul class="list">
+              <li>Architecture & space planning</li>
+              <li>Interior design (residential & commercial)</li>
+              <li>Retail + experience concepts</li>
+              <li>Furniture & product concept development</li>
+              <li>Presentation boards & visualization</li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <div class="card__title">Focus</div>
+            <p class="small">
+              New, technological, artistic, and functional — creating spaces that support real life:
+              routines, needs, and aspirations.
+            </p>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- INSTAGRAM -->
+    <section class="section" id="instagram">
+      <div class="container">
+        <div class="section__head">
+          <h2 class="section__title">Instagram</h2>
+          <p class="section__subtitle">A small window into current work and process.</p>
+        </div>
+
+        <div class="ig">
+          <div class="ig__header">
+            <div>
+              <div class="ig__handle">@zetadesign.s</div>
+              
+            </div>
+            <a class="button button--ghost" href="https://instagram.com/zetadesign.s" target="_blank" rel="noreferrer">Open profile</a>
+          </div>
+
+          <div id="igGrid" class="ig__grid" aria-live="polite"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="section section--alt" id="contact">
+      <div class="container contact">
+        <div class="contact__left">
+          <h2 class="section__title">Contact</h2>
+          <p class="section__subtitle">
+            Let’s talk about your space — feel free to reach out through the channel you prefer.
+          </p>
+
+          <div class="contact__cards">
+            <a class="contact-card" href="https://wa.me/593969784776" target="_blank" rel="noreferrer">
+              <div class="contact-card__label">WhatsApp</div>
+              <div class="contact-card__value">+593 969 784 776</div>
+            </a>
+
+            <a class="contact-card" href="sms:+19122103040">
+              <div class="contact-card__label">iMessage / SMS</div>
+              <div class="contact-card__value">+1 (912) 210-3040</div>
+            </a>
+
+            <a class="contact-card" href="mailto:emilyzavalaf@gmail.com">
+              <div class="contact-card__label">Email</div>
+              <div class="contact-card__value">emilyzavalaf@gmail.com</div>
+            </a>
+
+            <a class="contact-card" href="https://instagram.com/zetadesign.s" target="_blank" rel="noreferrer">
+              <div class="contact-card__label">Instagram</div>
+              <div class="contact-card__value">@zetadesign.s</div>
+            </a>
+          </div>
+        </div>
+
+        <div class="contact__right">
+          <form class="form" id="contactForm" autocomplete="on">
+            <div class="form__row">
+              <label>
+                Name
+                <input name="name" required placeholder="Your name" />
+              </label>
+              <label>
+                Email
+                <input name="email" type="email" required placeholder="you@email.com" />
+              </label>
+            </div>
+
+            <label>
+              Message
+              <textarea name="message" rows="6" required placeholder="Tell me about your project..."></textarea>
+            </label>
+
+            <div class="form__actions">
+              <button class="button" type="submit">Create email draft</button>
+              
+            </div>
+          </form>
+
+          <div class="fineprint">
+            <div class="fineprint__line"></div>
+            <p class="small muted">© 2026 Zeta Design • Built as a lightweight, static site.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- PROJECT MODAL -->
+  <div class="modal" id="projectModal" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Project details">
+    <div class="modal__backdrop" data-close></div>
+    <div class="modal__panel" role="document">
+      <button class="modal__close" aria-label="Close" data-close>×</button>
+      <div class="modal__content">
+        <div class="modal__media">
+          <img id="modalMainImage" alt="" />
+          <div class="modal__thumbs" id="modalThumbs"></div>
+        </div>
+        <div class="modal__text">
+          <div class="kicker" id="modalCategory"></div>
+          <h3 id="modalTitle"></h3>
+          <p class="muted" id="modalMeta"></p>
+          <div class="divider"></div>
+          <p id="modalDescription"></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+window.__PROJECTS__ = [
+  {
+    "id": "alarcon-arteaga",
+    "title": "Alarcón Arteaga",
+    "subtitle": "Residential interior — flexible living",
+    "category": "Residential",
+    "year": "2025",
+    "location": "Samborondon, Ecuador",
+    "cover": "assets/pages/page-01.png",
+    "gallery": ["assets/pages/page-01.png","assets/pages/lobbyalar.png"],
+    "description": "This project was developed to optimize the apartment’s layout for multiple daily uses, living, working, hosting, and relaxing; without sacrificing comfort or flow.\n\nThe design approach relies on a timeless palette of neutral tones to keep the space feeling open, calm, and cohesive, allowing natural light and material texture to do the heavy lifting.\n\nTo avoid a flat or overly minimal atmosphere, the concept introduces a carefully placed colorful focal point that becomes the visual anchor of the home.\n\nThis contrast creates depth, guides the eye through the space, and adds personality while maintaining an overall elegant, balanced aesthetic.\n\nThe result is a flexible residential environment that feels refined, functional, and intentionally curated."
+  },
+  {
+    "id": "vinum-italy",
+    "title": "Vinum Italy",
+    "subtitle": "Interior design — Florence, Italy",
+    "category": "Retail",
+    "year": "2023",
+    "location": "Florence, Italy",
+    "cover": "assets/pages/page-03.png",
+    "gallery": ["assets/pages/page-03.png", "assets/pages/page-02.png","assets/pages/vinumit.png"],
+    "description": "Vinum is located in Florence, Italy.\n\nIt consists of an interior design project born from a client's desire to remodel an old space in a developing tourist sector.\n\nResearching the main products sold in the region and its most important traditions was essential for creating the concept: a space where, in addition to providing a consumer experience, the process is conveyed through visual elements and interior materials.\n\nAs part of the design strategies for the space, tactical urbanism concepts were used to create a self-guiding experience for users through materiality.\n\nDifferent types of ceramic tiles were selected for the floors to facilitate self-guided circulation, ensuring users do not get lost during their experience in each room.\n\nAdditionally, this approach aims to evoke a sense of 'curiosity' to encourage return visits and promote the discovery of the place.\n\nIn this way, it fosters learning about local traditions and helps preserve them, while providing an experience similar to those offered in vineyards not too far from the area."
+  },
+  {
+    "id": "conquistador-mirror",
+    "title": "Conquistador Mirror",
+    "subtitle": "Product concept — Boca do Lobo",
+    "category": "Product Design",
+    "year": "2023",
+    "location": "Portugal (brand)",
+    "cover": "assets/pages/page-04.png",
+    "gallery": ["assets/pages/page-04.png","assets/pages/conqui.png"],
+    "description": "Conquistador Mirror was designed for the company Boca do Lobo, established in Portugal.\n\nIts identity is described as the creation of unique, elegant, and luxurious pieces crafted by local artisans, based on ancestral techniques combined with the latest technologies in the industry.\n\nAs a first approach, the brand's identity and image were analyzed to create a 'unique and exclusive' piece, as dictated by the brand.\n\nThe name comes from the place where the pieces are made and involves the artisans; Portugal is one of the oldest countries, and Christopher Columbus planned his strategy while living there, which was based on conquest around the world.\n\nWhen a person looks in the mirror, it's not just to admire their physical appearance; rather, if we delve deeper, we can see cultures, personalities, identities, styles, and much more…\n\nConquistador mirror: “New world, new masterpieces”."
+  },
+  {
+    "id": "equador-lamp",
+    "title": "Equador Lamp",
+    "subtitle": "Lighting concept — Catellani & Smith",
+    "category": "Product Design",
+    "year": "2023",
+    "location": "Quito, Ecuador (concept)",
+    "cover": "assets/pages/page-05.png",
+    "gallery": ["assets/pages/page-05.png","assets/pages/equa.png"],
+    "description": "Equador Lamp is designed from the desire to showcase more about Ecuador.\n\nCatellani & Smith, a company based in Italy, requested the creation of a new lamp that represents something important, something unique, with a story behind it.\n\nCatellani & Smith stands out in the industry thanks to its international collaborations, the variety of concepts behind each piece, and its support for creativity and cultural awareness through its works.\n\nIn Quito, Ecuador, lies the Equator, where both altitude and latitude have a value of 0.\n\nAmong its characteristics is that all matter appears to weigh less due to gravity, as it is crossed by the imaginary equatorial line.\n\nMoreover, the structure is shaped like a sphere to represent the Earth.\n\nThe desire to share where I came from…\n\nAs a result, a polycarbonate base was created that contains electromagnets generating a magnetic field that opposes gravity.\n\nThe power source controls the mechanism.\n\nMagnets with the same polarity repel each other.\n\nThe adjustment of force and position balances the magnetic force, allowing the table lamp to function under the concept that is intended to be conveyed…"
+  },
+  {
+    "id": "luminarium",
+    "title": "Luminarium",
+    "subtitle": "Event strategy — spatial experience",
+    "category": "Event / Experience",
+    "year": "2023",
+    "location": "Monterrey, Mexico",
+    "cover": "assets/pages/page-07.png",
+    "gallery": ["assets/pages/lumi1.png", "assets/pages/lumi2.png","assets/pages/lumi3.png", "assets/pages/lumi4.png", "assets/pages/lumi5.png"],
+    "description": "Luminarium is a sculpture of mazes of light and color created by English artist Alan Parkinson, having visited over 40 countries, with 600 exhibitions and attracting more than 3 million visitors.\n\nDGD requested the collaboration of marketing professionals and architects to create an event organization strategy, including distribution, structures, public presentation, among other factors.\n\nAs the main idea for the project, we considered using the properties of light and reflections through materiality, as well as extending the experience from inside the sculpture to the exterior and the other activities of the event.\n\nThe strategy focuses on creating a unique and unforgettable experience by engaging the five senses of the users.\n\nEvery aspect, from the aroma to the music, is designed to stimulate their senses and leave a lasting impression of the event.\n\nAmong the main characteristics of the project, the use of different colors and materials as differentiators of spaces can be observed; this quality is derived from careful research that best reflects the flow of an event.\n\nThrough tactical urbanism, a self-guided system can be created, allowing users to take full advantage of all the activities of the event without feeling overwhelmed."
+  },
+  {
+    "id": "sequuence",
+    "title": "Sequuence",
+    "subtitle": "Mixed-use development — community + amenities",
+    "category": "Mixed-Use",
+    "year": "2024",
+    "location": "Monterrey, Mexico",
+    "cover": "assets/pages/page-09.png",
+    "gallery": ["assets/pages/seq1.png", "assets/pages/seq2.png", "assets/pages/seq3.png","assets/pages/seq4.png", "assets/pages/seq5.png", "assets/pages/seq6.png", "assets/pages/seq7.png"],
+    "description": "Sequence is a real estate project that encompasses residences, offices, commercial spaces, and recreational areas.\n\nIts mission focuses on creating spaces and building sustainable communities that enhance the quality of life for individuals.\n\nThis is achieved through innovation, excellence in design, and an unwavering commitment to sustainability.\n\nAs part of the analysis, it is important to identify that the site is surrounded by two main avenues, which strategically facilitates circulation within the project.\n\nAdditionally, the area features a wide variety of important amenities such as restaurants, supermarkets, banks, schools, and various types of shops.\n\nThe project is distributed across three towers: Alpha, Beta, and Gamma; each tower includes commercial areas.\n\nParking spaces are allocated for each use in the Beta and Gamma towers.\n\nAdditionally, the latter two contain residential areas and a shared amenities area with a terrace.\n\nOn the street level, there is a recreational area that is accessible to all uses, inviting the public to enter and explore what Sequuence has to offer."
+  },
+  {
+    "id": "nicoleta",
+    "title": "Nicoleta",
+    "subtitle": "Retail boutique — adaptive display strategy",
+    "category": "Retail",
+    "year": "2024",
+    "location": "Guayaquil / Milagro, Ecuador",
+    "cover": "assets/pages/page-12.png",
+    "gallery": ["assets/pages/nic1.png", "assets/pages/nic2.png","assets/pages/nic3.png", "assets/pages/nic4.png"],
+    "description": "Nicoleta is a retail boutique offering all types of clothing and accessories for women, founded in Guayaquil, Ecuador.\n\nThe desire to expand and establish a location in another city opens the opportunity to re-design the current space and embrace new ways to showcase the many products sold within the store.\n\nA business that is expanding to Milagro, Ecuador driven by the enthusiasm of a mother and daughter working together to create new expectations for their customers captures my attention, leading me to propose a design strategy to make the most of the small space they have available.\n\nAmong the main requirements from the client was to maximize the use of space; therefore, the arrangement of display elements was designed not only horizontally but also vertically, while maintaining functionality.\n\nAdditionally, each piece of furniture was designed to be flexible and movable.\n\nWhile the small space might initially seem unable to meet all the client's needs, the design of these elements allows for fully addressing the desires of the customers.\n\nFor example, this includes a wall dedicated solely to photos or the functionality of easily accessing the merchandise."
+  },
+  {
+    "id": "archadeck-showroom",
+    "title": "Archadeck Showroom",
+    "subtitle": "Commercial interior — client journey",
+    "category": "Commercial",
+    "year": "2025",
+    "location": "Savannah, Georgia USA",
+    "cover": "assets/pages/page-14.png",
+    "gallery": ["assets/pages/arch1.png", "assets/pages/arch2.png", "assets/pages/arch3.png", "assets/pages/arch4.png", "assets/pages/arch5.png", "assets/pages/arch6.png"],
+    "description": "The showroom design is based on recreating the same experience that Archadeck’s clients have during the remodeling of their outdoor spaces.\n\nThe material selection emulates those typically used in outdoor living projects and includes areas that recreate an exterior deck inside the showroom, allowing users to directly feel the client experience.\n\nThe spatial organization of the showroom is conceived as a gradual transition from public to private.\n\nFirst, there is the public zone, where hardware, material options, and other design elements are displayed.\n\nNext, a semi-private area integrates the service zone, coffee station, and meeting room for clients who have already signed a contract.\n\nFinally, the private coworking area for Archadeck is located at the back, where the internal team and designers work."
+  },
+  {
+    "id": "the-pop",
+    "title": "The Pop",
+    "subtitle": "Concept restaurant — pop culture identity",
+    "category": "Commercial",
+    "year": "2025",
+    "location": "Guayaquil / Milagro, Ecuador",
+    "cover": "assets/pages/page-16.png",
+    "gallery": ["assets/pages/pop1.png","assets/pages/pop2.png","assets/pages/pop3.png","assets/pages/pop4.png"],
+    "description": "The restaurant’s initial idea was to draw inspiration from pop culture as the foundation for a marketing campaign and to shape a clear identity for the project.\n\nFrom that concept, the design was developed to convey fun, warmth, and an experience that feels different and unique within the area where it’s located.\n\nIt’s a concept restaurant that aims to attract people from different generations, inviting them to enjoy such an iconic and distinctive culture, from the entrance and overall atmosphere to the menu and cocktail program."
+  },
+  {
+    "id": "cornejo-carvel",
+    "title": "Cornejo Carvel",
+    "subtitle": "Interior concept — symmetry + cool palette",
+    "category": "Residential",
+    "year": "2025",
+    "location": "Orlando, Florida USA",
+    "cover": "assets/pages/page-17.png",
+    "gallery": ["assets/pages/rafa1.png","assets/pages/rafa2.png","assets/pages/rafa3.png"],
+    "description": "This interior concept is defined by the harmony of decorative wall panels, clean architectural lines, and a cool-toned palette that elevates the space into a refined, modern atmosphere.\n\nThe design prioritizes balance and visual order, using symmetry and controlled composition to create a sense of clarity and calm.\n\nEvery element is intentional, minimal yet impactful, resulting in a contemporary environment that feels sophisticated, spacious, and effortlessly relaxing.\n\nDesigned for those who value simplicity as a form of luxury and elegance expressed through precision."
+  },
+
+  /* ✅ NEW PROJECT */
+  {
+    "id": "skinny-joe-project",
+    "title": "Skinny Joe",
+    "subtitle": "Bedroom interior — personal retreat",
+    "category": "Residential",
+    "year": "2025",
+    "location": "Samborondón, Ecuador",
+    "cover": "assets/pages/page-18.png",
+    "gallery": ["assets/pages/noita3.png","assets/pages/noita1.png","assets/pages/noita2.png"],
+    "description": "A bedroom conceived as a personal retreat; where calm, comfort, and femininity coexist in perfect balance.\n\nThe space is designed to evoke a sense of peace through a warm neutral palette, soft textures, and clean architectural lines, creating an environment that feels both cozy and effortlessly elegant."
+  }
+];
+</script>
+
+  <script src="script.js"></script>
+  <!-- Instagram embed script (used only if you add post URLs in script.js) -->
+  <script async src="https://www.instagram.com/embed.js"></script>
+</body>
+</html>
