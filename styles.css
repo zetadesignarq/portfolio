@@ -519,18 +519,23 @@ input:focus, textarea:focus{
 .fineprint__line{ height:1px; background: var(--line); margin-bottom: 10px; }
 
 /* =========================================================
-   ✅ MODAL (FIXED): scroll works at 100% zoom for long text
+   ✅ MODAL (ROBUSTO iOS): desktop scroll en texto + mobile scroll total
    ========================================================= */
-/* =========================================================
-   ✅ MODAL (ROBUSTO): desktop scroll en texto + mobile scroll total
-   ========================================================= */
+
+/* Bloquea scroll del fondo cuando modal está abierto (agrega/quita en JS) */
+body.modal-open{
+  overflow: hidden;
+  touch-action: none;
+}
+
+/* Overlay: en móvil este es el que scrollea */
 .modal{
   position: fixed;
   inset: 0;
   display: none;
   z-index: 100;
-  padding: 18px;              /* espacio para que no pegue a los bordes */
-  overflow: auto;             /* ✅ permite scroll del overlay si hace falta */
+  padding: 18px;
+  overflow: auto;
   -webkit-overflow-scrolling: touch;
 }
 .modal.is-open{ display: block; }
@@ -541,7 +546,7 @@ input:focus, textarea:focus{
   background: rgba(0,0,0,.55);
 }
 
-/* Panel: se centra y NO se sale del viewport en desktop */
+/* Panel */
 .modal__panel{
   position: relative;
   width: min(1100px, 100%);
@@ -552,7 +557,6 @@ input:focus, textarea:focus{
   overflow: hidden;
   box-shadow: 0 30px 90px rgba(0,0,0,.25);
 
-  /* ✅ En desktop limita la altura al viewport */
   max-height: calc(100vh - 36px);
   max-height: calc(100dvh - 36px);
 }
@@ -576,10 +580,10 @@ input:focus, textarea:focus{
   display: grid;
   grid-template-columns: 1.1fr .9fr;
   height: 100%;
-  min-height: 0; /* ✅ */
+  min-height: 0;
 }
 
-/* Columna izquierda */
+/* Left */
 .modal__media{
   border-right: 1px solid var(--line);
   background: #fafafa;
@@ -587,11 +591,10 @@ input:focus, textarea:focus{
   display: flex;
   flex-direction: column;
   gap: 12px;
-  min-height: 0; /* ✅ clave en grids */
+  min-height: 0;
 }
 .modal__media img{
   width: 100%;
-  /* ✅ más flexible para distintos formatos */
   height: auto;
   max-height: 52vh;
   max-height: 52dvh;
@@ -623,13 +626,14 @@ input:focus, textarea:focus{
   box-shadow: 0 0 0 4px rgba(85,107,47,.10);
 }
 
-/* Columna derecha: scroll para textos largos (desktop) */
+/* Right: scroll solo aquí en desktop */
 .modal__text{
   padding: 24px;
-  overflow: auto;             /* ✅ scroll aquí */
-  min-height: 0;              /* ✅ clave */
+  overflow: auto;
+  min-height: 0;
   -webkit-overflow-scrolling: touch;
 }
+
 .kicker{
   color: var(--olive);
   font-weight: 600;
@@ -650,20 +654,21 @@ input:focus, textarea:focus{
 .modal__text p{
   margin: 0;
   color: rgba(11,11,11,.78);
-  white-space: pre-line; /* respeta \n\n */
+  white-space: pre-line;
 }
 
-/* ✅ Mobile: lo más estable es que scrollee TODO el modal */
+/* ✅ Mobile: lo más estable es que scrollee TODO el overlay (.modal) */
 @media (max-width: 980px){
   .modal{ padding: 12px; }
 
   .modal__panel{
-    max-height: none;          /* ✅ deja crecer */
+    max-height: none;
+    overflow: visible;
   }
 
   .modal__content{
     grid-template-columns: 1fr;
-    height: auto;              /* ✅ */
+    height: auto;
   }
 
   .modal__media{
@@ -671,16 +676,10 @@ input:focus, textarea:focus{
     border-bottom: 1px solid var(--line);
   }
 
-  .modal__media img{
-    max-height: 46vh;
-    max-height: 46dvh;
-  }
-
   .modal__text{
-    overflow: visible;         /* ✅ scroll lo maneja .modal (overlay) */
+    overflow: visible;
   }
 }
-
 
 /* Responsive */
 @media (max-width: 980px){
@@ -689,19 +688,7 @@ input:focus, textarea:focus{
   .about{ grid-template-columns: 1fr; }
   .contact{ grid-template-columns: 1fr; }
   .project{ grid-column: span 6; }
-
-  .modal__content{ grid-template-columns: 1fr; }
-  .modal__media{
-    border-right:0;
-    border-bottom: 1px solid var(--line);
-  }
-  .modal__panel{
-    margin: 16px auto;
-    height: calc(100vh - 32px);
-  }
-  .modal__media img{ min-height: 220px; }
 }
-
 @media (max-width: 720px){
   .project{ grid-column: span 12; }
   .contact__cards{ grid-template-columns: 1fr; }
