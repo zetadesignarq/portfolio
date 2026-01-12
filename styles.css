@@ -521,79 +521,91 @@ input:focus, textarea:focus{
 /* =========================================================
    ✅ MODAL (FIXED): scroll works at 100% zoom for long text
    ========================================================= */
+/* =========================================================
+   ✅ MODAL (ROBUSTO): desktop scroll en texto + mobile scroll total
+   ========================================================= */
 .modal{
   position: fixed;
   inset: 0;
-  display:none;
+  display: none;
   z-index: 100;
+  padding: 18px;              /* espacio para que no pegue a los bordes */
+  overflow: auto;             /* ✅ permite scroll del overlay si hace falta */
+  -webkit-overflow-scrolling: touch;
 }
-.modal.is-open{ display:block; }
+.modal.is-open{ display: block; }
+
 .modal__backdrop{
-  position:absolute;
-  inset:0;
+  position: fixed;
+  inset: 0;
   background: rgba(0,0,0,.55);
 }
 
-/* ✅ Panel with a fixed viewport height */
+/* Panel: se centra y NO se sale del viewport en desktop */
 .modal__panel{
   position: relative;
-  width: min(1100px, calc(100% - 26px));
-  height: calc(100vh - 48px);   /* ✅ KEY */
-  margin: 24px auto;
+  width: min(1100px, 100%);
+  margin: 0 auto;
   border-radius: 22px;
   background: white;
   border: 1px solid rgba(255,255,255,.25);
   overflow: hidden;
   box-shadow: 0 30px 90px rgba(0,0,0,.25);
-  display:flex;
-  flex-direction:column;
+
+  /* ✅ En desktop limita la altura al viewport */
+  max-height: calc(100vh - 36px);
+  max-height: calc(100dvh - 36px);
 }
 
 .modal__close{
-  position:absolute;
+  position: absolute;
   top: 14px;
   right: 14px;
   width: 42px; height: 42px;
   border-radius: 14px;
   border: 1px solid var(--line);
   background: white;
-  cursor:pointer;
+  cursor: pointer;
   font-size: 22px;
   line-height: 1;
-  z-index: 5;
+  z-index: 2;
 }
 
+/* Layout interno */
 .modal__content{
-  display:grid;
+  display: grid;
   grid-template-columns: 1.1fr .9fr;
   height: 100%;
-  min-height: 0;                /* ✅ IMPORTANT */
+  min-height: 0; /* ✅ */
 }
 
-/* Left column */
+/* Columna izquierda */
 .modal__media{
   border-right: 1px solid var(--line);
   background: #fafafa;
   padding: 16px;
-  display:flex;
-  flex-direction:column;
+  display: flex;
+  flex-direction: column;
   gap: 12px;
-  min-height: 0;                /* ✅ IMPORTANT */
+  min-height: 0; /* ✅ clave en grids */
 }
 .modal__media img{
-  width:100%;
-  flex: 1 1 auto;               /* ✅ expands/shrinks */
-  min-height: 260px;
+  width: 100%;
+  /* ✅ más flexible para distintos formatos */
+  height: auto;
+  max-height: 52vh;
+  max-height: 52dvh;
   object-fit: contain;
   border-radius: 16px;
   background: white;
   border: 1px solid var(--line);
 }
 .modal__thumbs{
-  display:flex;
+  display: flex;
   gap: 10px;
-  overflow:auto;
+  overflow: auto;
   padding-bottom: 6px;
+  -webkit-overflow-scrolling: touch;
 }
 .thumb{
   width: 92px;
@@ -601,8 +613,8 @@ input:focus, textarea:focus{
   border-radius: 12px;
   border: 1px solid var(--line);
   background: white;
-  cursor:pointer;
-  overflow:hidden;
+  cursor: pointer;
+  overflow: hidden;
   flex: 0 0 auto;
 }
 .thumb img{ width:100%; height:100%; object-fit: cover; }
@@ -611,15 +623,13 @@ input:focus, textarea:focus{
   box-shadow: 0 0 0 4px rgba(85,107,47,.10);
 }
 
-/* ✅ Right column scrolls */
+/* Columna derecha: scroll para textos largos (desktop) */
 .modal__text{
   padding: 24px;
-  overflow-y: auto;             /* ✅ scroll */
-  min-height: 0;                /* ✅ IMPORTANT */
+  overflow: auto;             /* ✅ scroll aquí */
+  min-height: 0;              /* ✅ clave */
   -webkit-overflow-scrolling: touch;
-  scrollbar-gutter: stable;
 }
-
 .kicker{
   color: var(--olive);
   font-weight: 600;
@@ -633,15 +643,44 @@ input:focus, textarea:focus{
   letter-spacing: -0.01em;
 }
 .divider{
-  height:1px;
+  height: 1px;
   background: var(--line);
   margin: 14px 0;
 }
 .modal__text p{
   margin: 0;
   color: rgba(11,11,11,.78);
-  white-space: pre-line;
+  white-space: pre-line; /* respeta \n\n */
 }
+
+/* ✅ Mobile: lo más estable es que scrollee TODO el modal */
+@media (max-width: 980px){
+  .modal{ padding: 12px; }
+
+  .modal__panel{
+    max-height: none;          /* ✅ deja crecer */
+  }
+
+  .modal__content{
+    grid-template-columns: 1fr;
+    height: auto;              /* ✅ */
+  }
+
+  .modal__media{
+    border-right: 0;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .modal__media img{
+    max-height: 46vh;
+    max-height: 46dvh;
+  }
+
+  .modal__text{
+    overflow: visible;         /* ✅ scroll lo maneja .modal (overlay) */
+  }
+}
+
 
 /* Responsive */
 @media (max-width: 980px){
