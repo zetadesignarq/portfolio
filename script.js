@@ -217,8 +217,8 @@ if (form) {
 
 /* Instagram embeds */
 const instagramPosts = [
-  "https://www.instagram.com/p/DLSx3U9v0Uw/",
-  "https://www.instagram.com/p/DLBMEAOPLay/",
+  "https://www.instagram.com/p/DZVV8mfEdAs/?igsh=c3BvdnI3MHdiNXR6",
+  "https://www.instagram.com/p/DZAoTxDEXVw/?igsh=MTN4ODhmcWFwcDhhOQ==",
   "https://www.instagram.com/p/DN4IhQYEYb-/?img_index=1"
 ];
 
